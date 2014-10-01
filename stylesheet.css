@@ -1,14 +1,101 @@
 
+#Sbutton {
+    margin-top: 50px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
 
+body {
+    background-image: url('warty-final-ubuntu.jpg');
+    background-size: cover;
+}
 
-
-
-
-.line {
-	font-family: sans-serif;
-	font-size:30px;
-	text-align:center;
+#sloganline {
+    font-family:sans-serif;
+    color: white;
+    text-align: center;
 }
 
 
+#toggle {
+    margin-top: 30px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
 
+.photos {
+    margin-top: 20px;
+    padding: 10px;
+    position:relative;
+    display:block;
+    margin-left: auto;
+    text-align: center;
+}
+
+#hide {
+    display:inline;
+}
+
+.pic {
+    height: 10%;
+    width: 10%;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+
+.youtube {
+    margin-top: 30px;
+    padding: 10px;
+    position:relative;
+    display:block;
+    margin-left: auto;
+    text-align: center;
+}
+
+
+.tempconv {
+    margin-top: 30px;
+    width: 400px;
+    text-align: center;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+#ftemp {
+    display:inline;
+    width: 60px;
+    font-color: black;
+    background-color: white;
+    font-family: sans-serif;
+    border-style:solid;
+    border-color:black;
+    border-width: 2px;
+    margin:10px;
+    float:left;
+    
+}
+
+#ftoc{
+    display: inline-block;
+    margin:10px;
+    border-radius: 5px;
+}
+
+#ctemp {
+    display: inline-block;
+    margin:10px;
+    background-color: white;
+    width: 60px;
+    font-color: black;
+    font-family: sans-serif;
+    border-style:solid;
+    border-color:black;
+    border-width: 2px;
+    float:right;
+    
+}
