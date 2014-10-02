@@ -1,41 +1,39 @@
-// CODE FOR SWAPPING OUT SLOGAN
+
+
+
+// CODE FOR repeating a entered line a specified (by user) number of times.
+
+
+
+
+
 
 function slogan() {
     var newslogan = prompt("what you say?");
-    document.getElementById('sloganline').innerHTML = newslogan;
-}
-    
-// CODE FOR TOGGLING OUT WAYNE
-
-
-function togglepic() {
-       var e = document.getElementById('hide');
-       if(e.style.display == 'inline')
-       {
-          e.style.display = 'none';
-       }
-       else
-       {
-          e.style.display = 'inline';
-       }
+    var numbertimes = prompt("how many you want?");
+   for (var i = 0; i < (numbertimes); i++) {
+    var node=document.createElement("P");
+    var textnode=document.createTextNode(newslogan)
+    node.appendChild(textnode);
+    document.getElementById("sloganline").appendChild(node);
+  }
 }
 
+function switchfunction() {
+    var answer = prompt("what is your favorite color- red, blue or white?").toLowerCase();
+    switch(answer){
+        case 'red':
+        var useranswer="Red is nice."
+        break;
+        case 'blue':
+        var useranswer="Blue is nice."
+        break;
+        case 'white':
+        var useranswer="White is really nice."
+        break;
+        default:
+        var useranswer="Sorry, it has to be red, white or blue.";
+    }
+    document.getElementById('switchline').innerHTML = useranswer;
 
-
-
-
-// CODE FOR TEMPERATURE CONVERSION
-
-function ftoc() {
-    var tf = document.getElementById('ftemp').value;
-    var tc = (tf-32)*(5/9);
-    var result = Math.round(tc*100)/100
-    document.getElementById('ctemp').innerHTML = result;
-}
-
-
-
-
-
-
-// CODE FOR DROPPING IMAGE
+};

@@ -7,57 +7,55 @@
 	<head>
 				<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<title>
-				SUDOMINNIX
+				SUDOMINNIX 2 
 		</title>
 
 	</head>
 
 	<body>
-                
-        
-            
-        <input type="button" onclick="slogan()" value="Slogan" id="Sbutton"/>
-        
-        <p id="sloganline">Slogan for now maybe</p>
 
-        <input type="button" onclick="togglepic()" value="Toggle" id="toggle"/>
-        
-        <div class="photos">
-            
-         <a href="http://www.cnn.com"> <img class="pic" src="https://pbs.twimg.com/profile_images/1675129971/image2.jpg" /> </a>
-            
-        <a  href="http://www.cnn.com" id="hide"> <img class="pic" src="https://pbs.twimg.com/profile_images/1675129971/image2.jpg" /></a>
-              
-        <a href="http://www.cnn.com"> <img class="pic" src="https://pbs.twimg.com/profile_images/1675129971/image2.jpg" /></a>  
-                    
+        <div id = "navibar">
+                <ul>
+                  
+                    <li><a href = "http://www.flaminglips.com">About</a></li>
+                    <li>Resources</li>
+                    <li>History</li>
+                      <li>Home</li>
+                </ul>
+
         </div>
                 
+        <div class = "leftblock">
 
-        
-        <div class = "youtube">
-        
-            <iframe width="420" height="315" src="http://www.youtube.com/embed/7EbrMAZbFpo" frameborder="0" allowfullscreen></iframe>
-        
-        </div>
-        
-        
-        <div class = "tempconv">
-            
-            <form><input type="text" id="ftemp" name="ftemp" placeholder="32"></form>
-
-        <input type="button" id="ftoc" value="F to C" onclick="ftoc()">
-            
-            <p id="ctemp">0</p>
-            
 
         </div>
-        
-        
-        
 
+        <div class = "rightblock">
+
+            <p>Enter slogan and how many times you want it repeated</p>
+
+            <input type="button" onclick="slogan()" value="Repeat" id="Sbutton"/>
         
+            <p id="sloganline"></p>
+
+
+            <p>Here's our switch statement</p>
+
+            <input type="button" onclick="switchfunction()" value="Switch" id="Switcheroo"/>
+
+            <p id="switchline">Tell us what you think.</p>
+
+
+        </div>
+
+
+        <div id = "footer">
+
+            <p>Copyright 2014</p>
+
+        </div>
         
-    <script src="//jaax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
      <script type="text/javascript" src="javascript.js"></script>
 	</body>
 
