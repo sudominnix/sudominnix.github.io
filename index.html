@@ -1,78 +1,189 @@
-
-
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 
 <head>
-		<link type="text/css" rel="stylesheet" href="cssstylesheet.css"/>
 
-		<title>jquery experimentation</title>
+<!--standard set up-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--unique meta-->
+
+<title>Road Trip Possibility Calculator</title>
+
+<link href='resources/favicon.ico' rel='icon' type='image/ico'>
+
+<meta content="" name="description">
+
+<meta content="" name="keywords">
+
+<meta content="" name="author">
+
+<!--CDN and local support files-->
+
+<!-- Core Bootstrap -->
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://code.jquery.com/ui/1.11.2/themes/black-tie/jquery-ui.css" rel="stylesheet">
+
+<link href="avgrund.css" rel="stylesheet">
+
+<!-- Font-family: 'Source Sans Pro', sans-serif;  -->
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+
+<!-- Local custom CSS -->
+<link type="text/css" rel="stylesheet" href="localcss.css"/>
+
+
+
+
 
 
 </head>
 
-
-
 <body>
 
 
-<div id ="foo">
+
+<!-- "page one" -->
+
+
+<div class="questionbox container">
+<form>
+<h4>Where are you?</h4>
+<input type="text" placeholder="US City, State" name="locationinput" class="input" id="locationinput"><br>
+
+<h4>What's the highway mileage (MPG) of your vehicle?</h4>
+<input type="text" placeholder="(number only)" name="mileage" id="mileageID" class="input" >
+<!-- add in cleaner for mpg-->
+<h4>What kind of fuel does your vehicle take?</h4>
+<select id="DropDown" class="input">
+        <option>Regular</option>
+        <option>Midgrade</option>
+        <option>Premium</option>
+        <option>Diesel</option>
+</select>
+<div class="pressme">Submit</div>
+</form>
 </div>
 
-<div id = "fu">
+
+
+
+<!-- "page two" -->
+
+<div class="panel panel-default fadein results">
+
+  <table class="table">
+  <thead> 
+    <h3 id="results">Results</h3> 
+  </thead>
+  <tr>
+    <th>Destination</th>
+    <th>Distance</th>
+    <th>Travel Time</th>
+    <th>Fuel Cost</th>
+    <th>Map It</th>
+  </tr>
+  <tbody>
+    <tr></tr>
+        <td class="Vegas">Vegas</td>
+        <td id="distanceVegas"></td>
+        <td id="traveltimeVegas"></td>
+        <td id="costVegas"></td>
+        <td id="mapVegas" class="maplink">Go!</td>
+    <tr></tr>
+        <td class="Alamo">The Alamo</td>
+        <td id="distanceAlamo"></td>
+        <td id="traveltimeAlamo"></td>
+        <td id="costAlamo"></td>
+        <td id="mapAlamo" class="maplink">Go!</td>
+    <tr></tr>
+        <td class="NewYork">New York City</td>
+        <td id="distanceNewYork"></td>
+        <td id="traveltimeNewYork"></td>
+        <td id="costNewYork"></td>
+        <td id="mapNewYork" class="maplink">Go!</td>    
+    <tr></tr>
+        <td class="Denver">Denver</td>
+        <td id="distanceDenver"></td>
+        <td id="traveltimeDenver"></td>
+        <td id="costDenver"></td>
+        <td id="mapDenver"  class="maplink">Go!</td>    
+    <tr></tr>
+        <td class="GrandCayon">Grand Canyon</td>
+        <td id="distanceGrandCanyon"></td>
+        <td id="traveltimeGrandCanyon"></td>
+        <td id="costGrandCanyon"></td>
+        <td id="mapGrandCanyon"  class="maplink">Go!</td>
+    <tr></tr>
+        <td class="Miami">Miami</td>
+        <td id="distanceMiami"></td>
+        <td id="traveltimeMiami"></td>
+        <td id="costMiami"></td>
+        <td id="mapMiami"  class="maplink">Go!</td>
+    <tr></tr>
+        <td class="Albuquerque">Albuquerque</td>
+        <td id="distanceAlbuquerque"></td>
+        <td id="traveltimeAlbuquerque"></td>
+        <td id="costAlbuquerque"></td>
+        <td id="mapAlbuquerque"  class="maplink">Go!</td>
+    <tr></tr>
+        <td class="NiagraFalls">Niagra Falls</td>
+        <td id="distanceNiagraFalls"></td>
+        <td id="traveltimeNiagraFalls"></td>
+        <td id="costNiagraFalls"></td>
+        <td id="mapNiagraFalls"  class="maplink">Go!</td>
+    <tr></tr>
+        <td class="Anchorage">Anchorage</td>
+        <td id="distanceAnchorage"></td>
+        <td id="traveltimeAnchorage"></td>
+        <td id="costAnchorage"></td>
+        <td id="mapAnchorage"  class="maplink">Go!</td>
+
+
+
+  </tbody>
+
+  </table>
+
+<div class = "notes fadein">notes</div>
+
+
 </div>
 
-<br></br>
 
+
+
+
+
+<!-- jQuery  -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="jquery.avgrund.js"></script>
+
+<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+ <!-- Local Custom JavaScript -->
+<script src="localjs.js"></script>
+
+<!-- Analytics -->
 <script>
-document.write(Date());
 </script>
-
-<p id = "loaded">Not loaded yet.</p>
-
-<script>
-document.write(Date());
-</script>
-
-<br></br>
-
- </div>
-        
-        
- <div class = "tempconv">
-
-        <input type="button" id="changeftocbutton" value="Change to F -> C" onclick="swapconversion()" style="display:none">
-        <input type="button" id="changectofbutton" value="Change to C -> F" onclick="swapconversion()" style="display:inline">
-            
-            <form><input type="text" id="itemp" name="itemp" placeholder="input temperature"></form>
-
-        <input type="button" id="ftoc" value="F to C" onclick="ftoc()" style="display:inline">
-        <input type="button" id="ctof" value="C to F" onclick="ctof()" style="display:none">
-
-            <p id="rtemp">0</p>
-            
-
-</div>
-        
-
-<br></br>
-
-
-<h3>multi state toggle experiment from plug in</h3>
-
-<div class = "multicolorfun">hello</div>
-
-
-		<script type="text/javascript" src="jquery-1.11.1.js"></script>
-		<script type="text/javascript" src="plugin.js"></script>
-
-		<script type="text/javascript" src="javascript.js"></script>
-
 
 </body>
-
-
-
 </html>

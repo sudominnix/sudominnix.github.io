@@ -1,0 +1,111 @@
+
+
+
+
+
+later ideas:
+drop down: category destination types
+	9 destinations for each category
+	chain destinations for road trip in stages
+for/in loop-> cut down on code
+
+---------------------------------------------------------------------------------------------------------------------------------------]
+
+
+
+attractive interface
+
+responsive and clean
+
+display as cards: multicolor
+
+flow:
+
+input:
+	where are you?
+	what is your car's mileage?
+
+return:
+	[distance api]
+	25 points
+		distance for travel time (double)
+		cost of gasoline (double, using avg daily rate)
+		(null out very close)
+		
+click through
+	[directions api]
+	display map
+	below: hotels rates, aaa
+
+
+
+other elements:
+	dynamic destinations (random) via filter, criteria
+
+
+--------------]
+
+xml for fuel
+
+yql xlm piece for fuel:
+
+yql temp piece:
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fmaps.googleapis.com%2Fmaps%2Fapi%2Fdistancematrix%2Fxml%3Forigins%3D" + departureCity + "%26destinations%3DLas%2BVegas%26mode%3Dcar%26units%3Dimperial%26language%3DEN'
+
+
+AIzaSyDgungI7koL0nuGbb9SWXyJX5-9UaCl57M
+
+blue: 1b8dbf
+black: 000000
+white: ffffff
+lightish grey: AEC2CC
+darker blue: 005B7F
+
+
+test
+https://maps.googleapis.com/maps/api/distancematrix/xml?origins=Dallas&destinations=Oklahoma+City&mode=car&units=imperial&language=EN
+
+https://maps.googleapis.com/maps/api/distancematrix/xml?origins=" + departureCity + "+" + departureState + "&destinations=Vegas&mode=car&units=imperial&language=EN
+
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'http%3A%2F%2Fwww.gasbuddy.com%2FGB_Price_List.aspx%3Fcntry%3DUSA'%20and%20xpath%3D'%2F%2F*%5B%40id%3D%22ctl00_Content_GBFPL_pnlUSA%22%5D%2Fdiv%5B1%5D%2Ftable%2Ftbody%2Ftr%5B1%5D%2Ftd%5B2%5D'&format=xml&callback=stripoutgas
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'http%3A%2F%2Fwww.gasbuddy.com%2FGB_Price_List.aspx%3Fcntry%3DUSA'%20and%20xpath%3D'%2F%2F*%5B%40id%3D%22ctl00_Content_GBFPL_pnlUSA%22%5D%2Fdiv%5B1%5D%2Ftable%2Ftbody%2Ftr%5B1%5D%2Ftd%5B2%5D'&format=json&diagnostics=true&callback=stripoutgas
+
+select * from html where url='http://www.gasbuddy.com/GB_Price_List.aspx?cntry=USA' and xpath='//*[@id="ctl00_Content_GBFPL_pnlUSA"]/div[1]/table/tbody/tr[1]/td[2]'
+
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'http%3A%2F%2Fwww.fueleconomy.gov%2Fws%2Frest%2Ffuelprices'%20
+
+select * from xml where url="http://www.fueleconomy.gov/ws/rest/fuelprices" 
+https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22http%3A%2F%2Fwww.fueleconomy.gov%2Fws%2Frest%2Ffuelprices%22%20&format=json&diagnostics=true&callback=
+
+
+
+Application ID
+nLWCXT4u
+
+Consumer Key
+dj0yJmk9V25RT2Fad3ZkVEFjJmQ9WVdrOWJreFhRMWhVTkhVbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD01NQ--
+
+Consumer Secret
+9f5f22a8cc025acac325c541bfd22bfa22de372a
+
+Application URL
+http://sudominnix.github.io
+
+Callback Domain
+sudominnix.github.io
+
+?
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js" type="text/javascript"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.js" type="text/javascript"></script>
+
+<script src="jsonpath-0.8.0.js" type="text/javascript"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js" type="text/javascript"></script>
+
+
+
+
