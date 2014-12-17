@@ -40,22 +40,32 @@ html {
 
 }
 
-
+.formtitle {
+    font-size: 30px;
+    font-weight:700;
+}
 
 
 .pressme {
-		height: 30px;
-		width: 100px;
-		color: white;
-		background-color: green;
-		border-radius: 5px;
-		text-align: center;
-		vertical-align: center;
-		line-height: 30px;
-		margin-top: 30px;
-		margin-left: auto;
-		margin-right: auto;
-		cursor: pointer;
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: #058d05;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: center;
+    padding: 5px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.pressme:hover {
+	background-color: #07bc07;
 }
 
 .results {
@@ -69,29 +79,28 @@ html {
 	text-align: center;
 }
 
-
-
 .maplink {
 	cursor: pointer;
 }
 
-
 .notes {
-	width:40px;
-	height: 25px;
-	font-size:10px;
-	margin-left: 3px;
+	width:70px;
+	font-size:14px;
 	margin-top: 3px;
-	position: fixed;
-	background-color:black;
+    margin-right: auto;
+    margin-left: auto;
+	background-color: black;
 	color: white;
 	font-style: italic;
 	border-radius: 5px;
 	text-align: center;
+    vertical-align: middle;
 	padding: 3px;
 	cursor: pointer;
 
 }
+
+
 
 .input {
 	width: 170px; 
