@@ -35,27 +35,17 @@
 
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-
-
 <!-- Local custom CSS -->
 <link type="text/css" rel="stylesheet" href="localcss.css"/>
 
-
-
-
-
-
 </head>
-
 <body>
-
-
 
 <!-- "page one" -->
 
-
 <div class="questionbox container">
 <form>
+<p class = "formtitle">Road Trip Suggestion and Cost Calculator</p>
 <h4>Where are you?</h4>
 <input type="text" placeholder="US City, State" name="locationinput" class="input" id="locationinput"><br>
 
@@ -69,12 +59,17 @@
         <option>Premium</option>
         <option>Diesel</option>
 </select>
+<h4>What kind of vacation do you want?</h4>
+<select id="DropDown2" class="input">
+        <option>Amusement Parks</option>
+        <option>National Parks</option>
+        <option>Historic Places</option>
+        <option>Big Cities</option>
+        <option>Relaxing Destinations</option>
+</select>
 <div class="pressme">Submit</div>
 </form>
 </div>
-
-
-
 
 <!-- "page two" -->
 
@@ -91,79 +86,14 @@
     <th>Fuel Cost</th>
     <th>Map It</th>
   </tr>
-  <tbody>
-    <tr></tr>
-        <td class="Vegas">Vegas</td>
-        <td id="distanceVegas"></td>
-        <td id="traveltimeVegas"></td>
-        <td id="costVegas"></td>
-        <td id="mapVegas" class="maplink">Go!</td>
-    <tr></tr>
-        <td class="Alamo">The Alamo</td>
-        <td id="distanceAlamo"></td>
-        <td id="traveltimeAlamo"></td>
-        <td id="costAlamo"></td>
-        <td id="mapAlamo" class="maplink">Go!</td>
-    <tr></tr>
-        <td class="NewYork">New York City</td>
-        <td id="distanceNewYork"></td>
-        <td id="traveltimeNewYork"></td>
-        <td id="costNewYork"></td>
-        <td id="mapNewYork" class="maplink">Go!</td>    
-    <tr></tr>
-        <td class="Denver">Denver</td>
-        <td id="distanceDenver"></td>
-        <td id="traveltimeDenver"></td>
-        <td id="costDenver"></td>
-        <td id="mapDenver"  class="maplink">Go!</td>    
-    <tr></tr>
-        <td class="GrandCayon">Grand Canyon</td>
-        <td id="distanceGrandCanyon"></td>
-        <td id="traveltimeGrandCanyon"></td>
-        <td id="costGrandCanyon"></td>
-        <td id="mapGrandCanyon"  class="maplink">Go!</td>
-    <tr></tr>
-        <td class="Miami">Miami</td>
-        <td id="distanceMiami"></td>
-        <td id="traveltimeMiami"></td>
-        <td id="costMiami"></td>
-        <td id="mapMiami"  class="maplink">Go!</td>
-    <tr></tr>
-        <td class="Albuquerque">Albuquerque</td>
-        <td id="distanceAlbuquerque"></td>
-        <td id="traveltimeAlbuquerque"></td>
-        <td id="costAlbuquerque"></td>
-        <td id="mapAlbuquerque"  class="maplink">Go!</td>
-    <tr></tr>
-        <td class="NiagraFalls">Niagra Falls</td>
-        <td id="distanceNiagraFalls"></td>
-        <td id="traveltimeNiagraFalls"></td>
-        <td id="costNiagraFalls"></td>
-        <td id="mapNiagraFalls"  class="maplink">Go!</td>
-    <tr></tr>
-        <td class="Anchorage">Anchorage</td>
-        <td id="distanceAnchorage"></td>
-        <td id="traveltimeAnchorage"></td>
-        <td id="costAnchorage"></td>
-        <td id="mapAnchorage"  class="maplink">Go!</td>
-
-
-
+  <tbody class = "tablebody">
   </tbody>
-
   </table>
 
 <div class = "notes fadein">notes</div>
-
-
 </div>
 
-
-
-
-
-
-<!-- jQuery  -->
+<!-- jQuery and plugins -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -172,8 +102,6 @@
 <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
-
 
 <!-- Bootstrap Core JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
