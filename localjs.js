@@ -169,19 +169,7 @@ $(document).ready(function(){
 	});
 });
 
-// plug-in code for pop-up 'notes' description on the '2nd' page
-$(function() {
-		$('.notes').avgrund({
-			height: 400,
-			width: 400,
-			holderClass: 'custom',
-			showClose: true,
-			showCloseText: 'Close',
-			enableStackAnimation: true,
-			onBlurContainer: '.container',
-			template: '<p>brief technical notes on demonstration:<br>* loads US govn xml feed and parses for matching fuel type (national average updated weekly) <br>* uses Google Maps Distance API for distance calculation <br>* uses arrays for processing suggestions (i.e. destinations are not hard coded in calculation code block) <br>* uses Bootstrap CSS <br>* uses several jQuery UI effects and plug-ins <br> </p>' 
-		});
-	});
+
 
 // highlight input field when in use
 $(document).ready(function(){
